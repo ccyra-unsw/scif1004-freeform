@@ -515,36 +515,19 @@
         font-style: italic;
         max-width: 640px;
       }
-      .item-detail-inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 22px;
-        padding: 0 4px 26px 40px;
-      }
-      @media (max-width: 600px) {
-        .item-detail-inner {
-          grid-template-columns: 1fr;
-        }
-      }
-      .detail-card {
-        background: var(--bg-panel);
-        border: 1px solid var(--hairline);
-        padding: 16px 18px;
+
+      .item-science {
+        padding: 0 4px 14px 40px;
         font-size: 15px;
-        line-height: 1.5;
+        line-height: 1.6;
+        max-width: 640px;
       }
-      .detail-card .tag {
+      .item-seen {
+        padding: 0 4px 26px 40px;
         font-family: 'JetBrains Mono', monospace;
         font-size: 11px;
         letter-spacing: 0.08em;
-        display: block;
-        margin-bottom: 8px;
-      }
-      .tag.film {
         color: var(--telemetry-blue);
-      }
-      .tag.real {
-        color: var(--ok-green);
       }
 
       /* ================= INSTRUMENT PANELS (calculators) ================= */
@@ -765,9 +748,8 @@
       <canvas id="bootCanvas"></canvas>
       <div class="boot-log mono" id="bootLog">&nbsp;</div>
       <h1 class="boot-title" id="bootTitle">
-        Congratulations. If you're reading this, you've been
-        selected as one of the lucky few to crew our journey to
-        Mars.
+        Congratulations. If you're reading this, you've been selected as one of
+        the lucky few to crew our journey to Mars.
       </h1>
       <p class="boot-sub" id="bootSub">
         Before you board, mission control has prepared a survival briefing built
@@ -840,8 +822,8 @@
       </div>
       <p style="max-width: 640px; color: var(--text-dim); margin-bottom: 36px">
         Every kilogram sent to Mars costs roughly as much as its weight in gold
-        to launch. Load your hold, then open each item to see what the movies
-        packed instead.
+        to launch. Load your hold, then open each item to see the science behind
+        it.
       </p>
       <div class="manifest-list" id="manifestList"></div>
     </section>
@@ -907,8 +889,8 @@
       <div class="section-label">04 · INSTRUMENT</div>
       <h2 class="title">Signal delay simulator</h2>
       <p>
-        Every space film gives you real-time conversation with Earth. You won't
-        get one. Set your distance from Earth and try sending a message: the
+        Real-time conversation with Earth isn't physically possible on a Mars
+        mission. Set your distance from Earth and try sending a message: the
         reply will take exactly as long as physics demands (sped up here so you
         don't have to wait twenty minutes for a demo).
       </p>
@@ -1002,8 +984,8 @@
     </section>
 
     <section>
-      <div class="section-label">06 · WHAT THE MOVIES SKIP</div>
-      <h2 class="title">The science<br />that actually saves you</h2>
+      <div class="section-label">06 · LIFE SUPPORT</div>
+      <h2 class="title">The science<br />that actually keeps you alive</h2>
       <p>ADD TEXT HERE</p>
       <div class="factbox">
         <div class="section-label">FAST FACTS</div>
@@ -1155,71 +1137,67 @@
             name: 'Radiation shielding (water-wall)',
             mass: 45,
             what: 'A layer of water-filled panels lining part of the spacecraft, used as a physical barrier against space radiation.',
-            film: 'Neither Interstellar nor Gravity shows any dedicated shielding, radiation is simply absent as a plot concern.',
-            real: 'Real transit vehicles are expected to use water or polyethylene walls as passive shielding, since water is needed anyway and doubles as radiation protection.',
+            real: "Space is full of ionising radiation that Earth's atmosphere and magnetic field normally block for us. Transit vehicles carry water or polyethylene walls as passive shielding, since the water crew need to drink anyway can double as a radiation barrier.",
           },
           {
             name: 'Water reclamation system',
             mass: 30,
             what: 'Equipment that filters and purifies wastewater, including urine, sweat, and cabin humidity, back into drinking water.',
-            film: 'The Martian shows a near-identical process, including reclaiming water from waste.',
-            real: 'Closed-loop recycling already exists on the ISS today, recovering over 90% of water from urine, sweat and cabin humidity.',
+            real: 'Closed-loop recycling systems filter and purify wastewater back into drinking water. This technology already exists on the ISS today, recovering over 90% of onboard water.',
+            seenIn: 'THE MARTIAN',
           },
           {
             name: 'Crop growth kit',
             mass: 15,
             what: 'Seeds, growth substrate, and lighting needed to grow a small amount of food during the mission.',
-            film: "Watney's potato farm in The Martian, grown in regolith fertilised with his own waste.",
-            real: 'Plausible in principle, but Martian soil contains toxic perchlorates that would need removing first, a step the film skips.',
+            real: 'Growing food on Mars is plausible in principle, but Martian soil contains toxic perchlorates that would need to be removed before anything could be safely planted in it.',
+            seenIn: 'THE MARTIAN',
           },
           {
             name: 'Mars-surface EVA suit',
             mass: 120,
             what: 'A pressurised suit built for walking and working on the Martian surface, distinct from suits designed for orbital spacewalks.',
-            film: "Gravity's suits are built for orbital spacewalks, not surface use, and Mars needs a very different design.",
-            real: 'Surface suits must handle fine, static-charged dust, a thin CO₂ atmosphere and drastic temperature swings, none of which orbital suits face.',
+            real: 'A suit built for the Martian surface needs to handle fine, static-charged dust, a thin CO₂ atmosphere, and drastic temperature swings, a very different engineering problem to a suit built for orbital spacewalks.',
+            seenIn: 'GRAVITY',
           },
           {
             name: 'Isolation & comms-delay support kit',
             mass: 5,
             what: 'Resources such as pre-recorded messages, mental health tools, and offline entertainment, meant to help crew cope with long communication gaps.',
-            film: 'No film meaningfully depicts communication lag, dialogue with Earth is almost always real-time.',
-            real: "At Mars' farthest point, a message takes up to 22 minutes each way, making live conversation with Earth physically impossible.",
+            real: "At Mars' farthest point from Earth, a message takes up to 22 minutes to arrive one-way, making live conversation physically impossible. Crews need tools like these to manage the isolation this creates.",
           },
           {
             name: 'Deployable solar array',
             mass: 60,
             what: 'Foldable solar panels that unfold once on the surface to generate electricity for the habitat.',
-            film: 'Power generation is rarely shown as a constraint in any of the three films.',
-            real: "Solar output on Mars is roughly 40 to 50% of Earth's, and dust accumulation on panels is an ongoing maintenance problem.",
+            real: 'Solar output on Mars is roughly 40 to 50% of what the same panel would generate on Earth, and dust accumulation on the panels is an ongoing maintenance problem for any surface mission.',
           },
           {
             name: 'Telemedicine & first-aid kit',
             mass: 10,
             what: 'Medical supplies and remote-diagnostic tools for treating injuries or illness without a doctor physically present.',
-            film: "The Martian's self-surgery scene, stapling a wound with no anaesthetic.",
-            real: "Real mission plans lean on remote-guided telemedicine, though comms delay limits how 'live' that guidance can be.",
+            real: "With a doctor rarely on hand, real mission plans lean on remote-guided telemedicine, though the same communication delay limits how 'live' that guidance can actually be.",
+            seenIn: 'THE MARTIAN',
           },
           {
             name: 'Dust mitigation gear',
             mass: 8,
             what: 'Brushes, seals, and filters designed to stop fine, static-charged Martian dust from damaging equipment and suits.',
-            film: "The Martian opens with a wind storm violent enough to nearly destroy the crew's habitat.",
-            real: "Mars' atmosphere is about 1% the density of Earth's, even a 100km/h Martian wind would feel like a gentle breeze.",
+            real: "Mars' atmosphere is about 1% the density of Earth's, so even a 100km/h Martian wind would feel like a gentle breeze. The real hazard is much finer, static-charged dust that clings to equipment over time.",
+            seenIn: 'THE MARTIAN',
           },
           {
             name: 'Backup communications relay',
             mass: 12,
             what: 'A secondary radio and antenna system kept in reserve in case the primary communications link fails.',
-            film: 'Not addressed in any of the three films, communication is treated as always available.',
-            real: 'Mission architectures typically plan for relay satellites and redundant links, since a single point of failure could isolate a crew entirely.',
+            real: 'Mission architectures typically plan for relay satellites and redundant communication links, since a single point of failure could isolate a crew entirely.',
           },
           {
             name: 'ISRU oxygen generation unit',
             mass: 90,
             what: "A device that extracts oxygen from the Martian atmosphere's carbon dioxide, a process known as in-situ resource utilisation (ISRU).",
-            film: "Echoes Watney's improvised oxygen chemistry, though his version is simplified for the screen.",
-            real: "NASA's MOXIE experiment aboard Perseverance has already demonstrated producing oxygen from Martian CO₂ at small scale.",
+            real: "NASA's MOXIE experiment aboard the Perseverance rover has already demonstrated extracting oxygen from Martian CO₂ at small scale.",
+            seenIn: 'THE MARTIAN',
           },
         ];
         const BUDGET = 400;
@@ -1238,12 +1216,10 @@
         <div class="item-mass">${item.mass} KG</div>
         <div class="item-caret">▸</div>
       </div>
-      <div class="item-detail">
+     <div class="item-detail">
         <div class="item-what">${item.what}</div>
-        <div class="item-detail-inner">
-          <div class="detail-card"><span class="tag film">HOLLYWOOD SAID</span>${item.film}</div>
-          <div class="detail-card"><span class="tag real">MISSION CONTROL SAYS</span>${item.real}</div>
-        </div>
+        <div class="item-science">${item.real}</div>
+        ${item.seenIn ? `<div class="item-seen">SEEN IN: ${item.seenIn}</div>` : ''}
       </div>
     `;
           list.appendChild(el);
