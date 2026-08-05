@@ -22,7 +22,7 @@
     if (ci <= line.length) {
       logEl.innerHTML = line.slice(0, ci) + '<span class="cursor">▌</span>';
       ci++;
-      setTimeout(typeLine, 28);
+      setTimeout(typeLine, 38);
     } else {
       li++;
       ci = 0;
