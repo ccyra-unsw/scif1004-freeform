@@ -324,7 +324,7 @@ h1.headline em {
 
 /* ================= SECTION SHELL ================= */
 section {
-  max-width: 760px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 90px 28px;
   border-bottom: 1px solid var(--hairline);
