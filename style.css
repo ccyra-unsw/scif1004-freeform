@@ -733,6 +733,7 @@ footer {
 footer .section-label {
   margin-bottom: 20px;
 }
+
 .refs {
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
@@ -742,6 +743,16 @@ footer .section-label {
 .refs li {
   margin-bottom: 6px;
 }
+.refs a {
+  color: var(--telemetry-blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.refs a:hover {
+  border-bottom-color: var(--telemetry-blue);
+}
+
 footer .colophon {
   margin-top: 60px;
   font-family: 'JetBrains Mono', monospace;
@@ -919,3 +930,4 @@ footer .colophon {
   font-size: 15px;
   color: var(--text-dim);
 }
+
