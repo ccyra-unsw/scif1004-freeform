@@ -136,3 +136,20 @@
   });
   updateGauge();
 })();
+
+const filterBar = document.getElementById('filterBar');
+const filterPills = filterBar.querySelectorAll('.filter-pill');
+
+filterPills.forEach((pill) => {
+  pill.addEventListener('click', () => {
+    const filter = pill.dataset.filter;
+
+    filterPills.forEach((p) => p.classList.remove('active'));
+    pill.classList.add('active');
+
+    document.querySelectorAll('.item').forEach((itemEl) => {
+      const matches = filter === 'all' || itemEl.dataset.cat === filter;
+      itemEl.classList.toggle('filtered-out', !matches);
+    });
+  });
+});
