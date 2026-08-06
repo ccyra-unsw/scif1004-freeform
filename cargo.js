@@ -1,21 +1,20 @@
 /* ============ CARGO MANIFEST ============ */
 
-// Could maybe add a food section? --> might not be necessary
 (function () {
   const items = [
     {
       name: 'Radiation shielding (water-wall)',
       mass: 45,
       category: 'protection',
-      what: 'A layer of water-filled panels lining part of the spacecraft, used as a physical barrier against space radiation.',
+      what: 'A layer of water-filled panels lining part of the spacecraft can be used as a physical barrier against space radiation.',
       real: "Space is full of ionising radiation that Earth's atmosphere and magnetic field normally block for us. Transit vehicles carry water or polyethylene walls as passive shielding, since the water crew need to drink anyway can double as a radiation barrier.",
     },
     {
       name: 'Water reclamation system',
       mass: 30,
       category: 'life-support',
-      what: 'Equipment that filters and purifies wastewater, including urine, sweat, and cabin humidity, back into drinking water.',
-      real: 'Closed-loop recycling systems filter and purify wastewater back into drinking water. This technology already exists on the ISS today, recovering over 90% of onboard water.',
+      what: 'Equipment that filters and purifies wastewater, including urine, sweat, and humidity, back into drinking water.',
+      real: 'Closed-loop recycling systems filter and purify wastewater back into drinking water. This technology already exists on the International Space Station, and recovers over 90% of onboard water.',
       seenIn: 'THE MARTIAN',
     },
     {
@@ -31,7 +30,7 @@
       mass: 120,
       category: 'protection',
       what: 'A pressurised suit built for walking and working on the Martian surface, distinct from suits designed for orbital spacewalks.',
-      real: 'A suit built for the Martian surface needs to handle fine, static-charged dust, a thin CO₂ atmosphere, and drastic temperature swings, a very different engineering problem to a suit built for orbital spacewalks.',
+      real: 'A suit built for the surface of Mars needs to handle fine, static-charged dust, a thin CO₂ atmosphere, and drastic temperature swings.',
       seenIn: 'GRAVITY',
     },
     {
@@ -40,6 +39,7 @@
       category: 'comms',
       what: 'Resources such as pre-recorded messages, mental health tools, and offline entertainment, meant to help crew cope with long communication gaps.',
       real: "At Mars' farthest point from Earth, a message takes up to 22 minutes to arrive one-way, making live conversation physically impossible. Crews need tools like these to manage the isolation this creates.",
+      seenIn: 'INTERSTELLAR',
     },
     {
       name: 'Deployable solar array',
