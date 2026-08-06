@@ -143,6 +143,37 @@
         gold to launch. Click on the checkbox of the items you want to load,
         then open each one to see the science behind it.
       </p>
+
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-pill active" data-filter="all">
+          ALL SYSTEMS
+        </button>
+        <button class="filter-pill" data-filter="protection">
+          <span
+            class="filter-dot"
+            style="background: var(--mars-rust-bright)"
+          ></span
+          >PROTECTION
+        </button>
+        <button class="filter-pill" data-filter="life-support">
+          <span class="filter-dot" style="background: var(--ok-green)"></span
+          >LIFE SUPPORT
+        </button>
+        <button class="filter-pill" data-filter="power">
+          <span
+            class="filter-dot"
+            style="background: var(--signal-amber)"
+          ></span
+          >POWER
+        </button>
+        <button class="filter-pill" data-filter="comms">
+          <span
+            class="filter-dot"
+            style="background: var(--telemetry-blue)"
+          ></span
+          >COMMS
+        </button>
+      </div>
       <div class="manifest-list" id="manifestList"></div>
     </section>
 
